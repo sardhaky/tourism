@@ -18,12 +18,11 @@
                 <li><a href="#timeline">Restoration Timelines</a></li>
                 <li><a href="#support">Support</a></li>
                 <li><a href="#virtual-tours">Virtual Tours</a></li>
-                <li><a href="#" onclick="showOverlay()">Login/Signup</a></li> <!-- Added Login/Signup Link -->
             </ul>
         </nav>
     </header>
 
-    <!-- Intro Section -->
+    <!-- Main Section -->
     <section id="intro">
         <div class="intro-content">
             <h1>Explore Historical Sites and Their Restoration Timelines</h1>
@@ -40,20 +39,31 @@
 
     <!-- Restoration Timelines Section -->
     <section id="timeline">
-        <h2>Restoration Timelines</h2>
-        
-        <!-- Site selection dropdown -->
-        <label for="site-select">Choose a site to view its restoration timeline:</label>
-        <select id="site-select" onchange="loadTimeline(this.value)">
-            <option value="Taj Mahal">Taj Mahal</option>
-            <option value="Red Fort">Red Fort</option>
-            <option value="Chittorgarh Fort">Chittorgarh Fort</option>
-            <option value="Qutub Minar">Qutub Minar</option>
-            <option value="Gateway of India">Gateway of India</option>
-        </select>
-
-        <!-- Timeline Embed Container -->
-        <div id="timeline-embed" class="timeline-container"></div>
+        <h1>Restoration Timelines</h1>
+        <p>Preservation efforts across historical sites</p>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-date">1995</div>
+                <div class="timeline-content" style="background-color: #FFB347;">
+                    <h2>Foundation Stabilization</h2>
+                    <p>Initial restoration to stabilize the structure's foundation to prevent collapse.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2005</div>
+                <div class="timeline-content" style="background-color: #FFD700;">
+                    <h2>Wall Restoration</h2>
+                    <p>Reconstruction of damaged walls using original materials and techniques.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2010</div>
+                <div class="timeline-content" style="background-color: #B0C4DE;">
+                    <h2>Roof Repair</h2>
+                    <p>Repairing the roof to prevent water seepage and further damage.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Support Section -->
@@ -67,35 +77,6 @@
     <footer>
         <p>&copy; 2024 Historical Sites Preservation. All rights reserved.</p>
     </footer>
-
-    <!-- Overlay for Login/Signup -->
-    <div id="overlay" class="hidden">
-        <div id="form-container">
-            <!-- Login Form -->
-            <div id="login-form">
-                <h3>Login</h3>
-                <form id="loginForm">
-                    <input type="text" id="login-username" placeholder="Username" required>
-                    <input type="password" id="login-password" placeholder="Password" required>
-                    <button type="submit">Login</button>
-                </form>
-                <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
-            </div>
-
-            <!-- Signup Form -->
-            <div id="signup-form" class="hidden">
-                <h3>Signup</h3>
-                <form id="signupForm">
-                    <input type="text" id="signup-username" placeholder="Username" required>
-                    <input type="email" id="signup-email" placeholder="Email" required>
-                    <input type="password" id="signup-password" placeholder="Password" required>
-                    <button type="submit">Sign Up</button>
-                </form>
-                <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
-            </div>
-        </div>
-        <button onclick="hideOverlay()">Close</button>
-    </div>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
