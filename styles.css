@@ -1,0 +1,221 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Basic Fonts */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 1.5em;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Intro Section */
+#intro {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f4f4f4;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Map Section */
+#map-container {
+    height: 500px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Timeline Section */
+#timeline {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+#timeline-embed {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Vertical Timeline */
+.timeline-container {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-container:before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #333;
+    z-index: 0;
+}
+
+/* Timeline Event */
+.timeline-event {
+    margin: 20px 0;
+    padding-left: 40px;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.timeline-event:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.timeline-event:nth-child(even) {
+    background-color: #e9e9e9;
+}
+
+/* Event Year */
+.timeline-event h4 {
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #007bff;
+    position: relative;
+    padding-left: 40px;
+}
+
+.timeline-event h4::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+
+/* Event Description */
+.timeline-event p {
+    font-size: 1em;
+    color: #555;
+    margin-top: 8px;
+}
+
+/* Hover Effects */
+.timeline-event:hover {
+    background-color: #f0f8ff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.timeline-event:hover h4 {
+    color: #0056b3;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scrollable Timeline Container */
+#timeline-embed {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Overlay for Login/Signup */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#form-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px;
+}
+
+#form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#form-container button {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
+}
